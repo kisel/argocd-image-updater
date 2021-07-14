@@ -85,7 +85,7 @@ func (sil *SortableImageTagList) Tags() []string {
 // to its name.
 func (tag *ImageTag) String() string {
 	if tag.TagDigest != "" {
-		return tag.TagDigest
+		return tag.TagName + "@" + tag.TagDigest
 	} else {
 		return tag.TagName
 	}
